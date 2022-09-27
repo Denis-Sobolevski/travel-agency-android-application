@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tourexpert">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TourExpert">
+        <activity android:name=".activity_report_display"></activity>
+        <!--  -->
+        <activity android:name=".activity_add_hotel" />
+        <activity android:name=".activity_add_attraction" />
+        <activity android:name=".activity_add_flight" />
+        <activity android:name=".activity_add_city" />
+        <activity android:name=".activity_register_user" />
+        <activity android:name=".activity_login" />
+        <activity android:name=".activity_user_profile" />
+        <activity android:name=".activity_reset_password" /> <!--  -->
+        <activity
+            android:name=".activity_reports"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity_purchase_history"
+            android:screenOrientation="portrait"> <!-- activity_purchase_history is locked to portrait -->
+        </activity>
+        <activity
+            android:name=".activity_attractions"
+            android:screenOrientation="portrait"> <!-- activity_attractions is locked to portrait -->
+        </activity>
+        <activity
+            android:name=".activity_hotels"
+            android:screenOrientation="portrait"> <!-- activity_hotels is locked to portrait -->
+        </activity>
+        <activity
+            android:name=".activity_categories"
+            android:screenOrientation="portrait"> <!-- activity_categories is locked to portrait -->
+        </activity>
+        <activity
+            android:name=".activity_flights"
+            android:screenOrientation="portrait"> <!-- activity_flights is locked to portrait -->
+        </activity>
+        <activity
+            android:name=".activity_cities"
+            android:screenOrientation="portrait"> <!-- activity_cities is locked to portrait -->
+        </activity>
+        <activity
+            android:name=".activity_manage_users"
+            android:screenOrientation="portrait"> <!-- manage employees is locked to portrait -->
+        </activity>
+        <!--
+         all the user index activities will have their screen orientation
+         limited to portrait, because of well known compatibility issues
+         of GridView with landscape orientation
+        -->
+        <activity
+            android:name=".activity_index_employee"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_index_user"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_index_admin"
+            android:screenOrientation="portrait" /> <!--  -->
+        <activity
+            android:name=".activity_splash"
+            android:screenOrientation="portrait"> <!-- Splash screen is locked to portrait mode -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

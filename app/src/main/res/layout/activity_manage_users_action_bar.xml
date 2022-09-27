@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme_2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/go_back_to_index_admin"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"/>
+
+        <SearchView
+            android:id="@+id/search_bar"
+            android:queryBackground="@color/white"
+            android:queryHint="search by email address"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/go_back_to_index_admin"
+            android:layout_width="wrap_content"
+            android:goIcon="@drawable/search_user_by_email_address"
+            android:layout_height="wrap_content"
+            android:searchIcon="@drawable/search_user_by_email_address"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

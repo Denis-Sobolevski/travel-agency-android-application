@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "703134761552",
+    "project_id": "tourexpert-3f891",
+    "storage_bucket": "tourexpert-3f891.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703134761552:android:5bc7fa2b829782ea88c755",
+        "android_client_info": {
+          "package_name": "com.example.tourexpert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703134761552-nf5836ceaum6cn5tv55hau3d3huf8gfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlUnfCOO2feXsdWd30shJVu9ZgO1fV1Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703134761552-nf5836ceaum6cn5tv55hau3d3huf8gfn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

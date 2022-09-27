@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        applicationId "com.example.tourexpert"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        // to use drawables
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources false // if you set this to true, the application will crash
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // region ADDED dependencies:
+    // Firebase Database:
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-database:20.0.3'
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
+
+    // GIF view:
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+    // style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    // for TextInputLayout
+    implementation 'com.google.android.material:material:1.3.0'
+
+    // buttomNavigation View
+    implementation 'com.google.android.material:material:1.0.0'
+
+    // RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    // cardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // dialogPlus { mainly used when updating products / cities }
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+
+    // country flag external package from git:
+    implementation 'com.github.blongho:worldCountryData:v1.5.2'
+
+    // paypal payment API
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
+
+    // PDF API:
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'com.karumi:dexter:5.0.0'
+
+    // firebase UI API (Used to download images):
+    implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
+    // endregion ADDED dependencies
+
+    // used for graph's
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+}
+
+apply plugin: 'com.google.gms.google-services'
